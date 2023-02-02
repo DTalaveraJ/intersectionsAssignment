@@ -65,7 +65,7 @@ for jj = 1:length(directions(:,1))
             X_P_dummy(index,:) = [jj;ii;t;X_P(:,ii,jj);facing];
 
             if index > 1
-                if abs(X_P_dummy(index,3))> abs(X_P_dummy(index-1,3))
+                if abs(X_P_dummy(index,3)) < abs(X_P_dummy(index-1,3))
                 
                         
                         X_P_vec(jj,:) = X_P_dummy(index,2:end);
